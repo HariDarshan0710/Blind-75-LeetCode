@@ -1,2 +1,2 @@
 # Blind-75-LeetCode
-Blind 75 Leetcode
+Java Solutions for Blind 75 Leetcode
