@@ -1,0 +1,27 @@
+import java.util.HashMap;
+import java.util.HashSet;
+
+class Solution{
+public boolean uniquceoccurances(int [] arr){
+HashMap<Integer, Integer> fmap=new HashMap<>();
+//count and add all elements to hashmap and count frequency 
+for(int val: arr){
+fmap.put(val, fmap.getOrDefault(val,0)+1);
+}
+HashSet<Integer> unique=new HashSet<>();
+for(int freq: fmap.values()){
+if(unique.contains(freq)){
+return false;
+}else{
+unique.add(freq);
+}
+}
+return true;
+}
+public static void main(String []args){
+int []array={1,2,1,2,2,3};
+Solution sol=new Solution();
+
+System.out.println("uniqueoccurance:"+sol.uniquceoccurance(array));
+}
+}
